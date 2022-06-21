@@ -1,0 +1,4 @@
+sqrt(2) = 1.4142135623731
+sqrt2*sqrt2 = 2 (should be equal 2)
+exp(pi) = 23.1406926327793 (should be approximately 23.14)
+the power of pi to e = 22.459157718361 (should be approximately 22.45)

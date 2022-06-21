@@ -1,0 +1,11 @@
+My max int using while loop = 2147483647
+My max int from int.MaxValue = 2147483647
+My min int using while loop)= -2147483648
+My min int from int.MaxValue = -2147483648
+Epsilon for double = 2.22044604925031E-16
+Epsilon for float = 1.192093E-07
+sumA-1 = 0.000000e+000 should be 1.110223e-010
+sumB-1 = 1.110223e-010 should be 1.110223e-010
+1,2: False
+0,0: True
+0,1e-10: True

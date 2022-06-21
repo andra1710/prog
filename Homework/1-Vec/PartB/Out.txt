@@ -1,0 +1,10 @@
+Part B: We will be using v1 and v2 from Part A.
+v1 =(1 2 3)
+v2 =(2 0 1)
+norm of v1, |v1| = 3.74165738677394
+This should be 3.74165739
+The dot produckt of v1 and v2 = 5
+This should be 5
+The cross produckt of v1 x v2 =(2 5 -4)
+This should be (2, -5, -4)
+Overriden ToString method for vector v1: 123, standard just states "vec"

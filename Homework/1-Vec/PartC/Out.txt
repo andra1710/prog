@@ -1,0 +1,9 @@
+v1 =(1 2 3)
+v2 =(2 0 1)
+Part C: Testing the approx method between our vectors form Part A
+Testing approx(v1, v1), expecting true:
+v1.approx(v1) = True
+approx(v1,v1) = True
+Testing approx(v1, v2), expecting false:
+v1.approx(v2) = False
+approx(v1,v2) = False

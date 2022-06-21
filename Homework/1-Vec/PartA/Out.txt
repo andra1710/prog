@@ -1,0 +1,15 @@
+Part A: Testing the basic math on our vectors
+Testing the print function:
+v0 =(0 0 0)
+v1 =(1 2 3)
+v2 =(2 0 1)
+-v1 =(-1 -2 -3)
+This should be (-1, -2, -3)
+v1+v2 =(3 2 4)
+This should be (3, 2, 4)
+v1-v2 =(-1 2 2)
+This should be (-1, 2, 2)
+3*v1 =(3 6 9)
+This should be (3, 6, 9)
+v1*3 =(3 6 9)
+This should also be (3, 6, 9)
