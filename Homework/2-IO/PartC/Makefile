@@ -1,7 +1,7 @@
-all: Out.txt
-	cat Out.txt
+all: out.txt
+	cat out.txt
 
-Out.txt: fileio.exe
+out.txt: fileio.exe
 	mono fileio.exe -input:input.txt -output:out.txt
 
 fileio.exe: fileio.cs

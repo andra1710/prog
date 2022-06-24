@@ -15,7 +15,7 @@ public class QRGS{
 	}
 
 	public static vector solve(matrix Q, matrix R, vector b){ /* solve vector */
-		matrix QT = Q.transpose(); // Q transpose
+		matrix Q_trans = Q.transpose(); // Q transpose
 		vector x = Q_trans*b; // calculates the solotion
 		backsub(R,x);
 		return x;

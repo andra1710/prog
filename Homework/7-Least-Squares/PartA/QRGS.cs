@@ -15,7 +15,7 @@ public class QRGS{
 	}
 
 	public static vector solve(matrix Q, matrix R, vector b){ /* solve vector */
-		matrix QT = Q.transpose(); // Q transpose
+		matrix Q_trans = Q.transpose(); // Q transpose
 		vector x = Q_trans*b; // calculates the solotion
 		backsub(R,x);
 		return x;
@@ -36,10 +36,10 @@ public class QRGS{
 		matrix I = new matrix(n,n);
 		I.set_identity();
 
-		matrix invers = new matrix(n,n);
+		matrix inv = new matrix(n,n);
 		for(int i=0; i<n; i++){
 			vector e = I[i];
-			vector inv_i = QRGSsolve(Q, R, e);
+			vector inv_i = solve(Q, R, e);
 			inv[i] = inv_i;
 		}
 		return inv;

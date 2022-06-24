@@ -1,7 +1,7 @@
-all: Out.txt
-	cat Out.txt
+all: out.txt
+	cat out.txt
 
-Out.txt: stdin.exe
+out.txt: stdin.exe
 	echo 1 2 3 4 5 > input.txt
 	mono stdin.exe < input.txt > out.txt
 

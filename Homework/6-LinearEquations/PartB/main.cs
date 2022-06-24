@@ -18,9 +18,9 @@ public class main{
 			}
 		}
 		A.print(); // Randomly generated square matrix A (5x5)
-		lineq.QRGSdecomp(Q,R);
+		QRGS.QRGSdecomp(Q,R);
 
-		matrix A_inv = lineq.QRGSinverse(Q,R);
+		matrix A_inv = QRGS.QRGSinverse(Q,R);
 
 		A_inv.print(); // Inverse of matrix A
 

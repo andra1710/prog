@@ -10,6 +10,5 @@ main.exe:main.cs Splines.dll
 Splines.dll:Splines.cs
 	mcs -target:library $<
 
-.PHONY:
 clean:
 	rm -f *.exe *.txt *.dll *.png

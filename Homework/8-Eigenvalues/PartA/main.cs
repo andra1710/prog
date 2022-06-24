@@ -59,7 +59,7 @@ public class main{
 		WriteLine("Checking if V*V^T=I");
 		matrix ans4 = V.transpose()*V;
 		ans4.print();
-		WriteLine($"\n Using the approx. method, this is {ans4.approx(I)}"\n);
+		WriteLine($"\n Using the approx. method, this is {ans4.approx(I)}\n");
 
 
 

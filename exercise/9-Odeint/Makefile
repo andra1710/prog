@@ -1,20 +1,13 @@
-all: out.txt ode_test.png
-	cat out.txt
+all: ode.png
 
-ode_test.png: ode_pyxplot.gpi sol.txt
-	pyxplot $<
+ode.png: Out.txt ode.pyxplot.gpi
+	pyxplot ode.pyxplot.gpi
 
-out.txt: main.exe
-	mono $< 1> out.txt 2> sol.txt
+Out.txt: main.exe
+	mono $< > $@
 
-main.exe: main.cs vector.dll rk.dll
-	mcs $< -reference:vector.dll,rk.dll
-
-rk.dll: rk.cs vector.dll
-	mcs $< -target:library -reference:vector.dll
-
-vector.dll: vector.cs
-	mcs $< -target:library
+main.exe: main.cs matlib.dll
+	mcs $< -out:main.exe -target:exe -reference:matlib.dll
 
 clean:
-	rm -r *.dll *.exe *.png *.txt
+	rm -r *.txt *.exe *.png

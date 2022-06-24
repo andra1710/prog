@@ -43,7 +43,7 @@ public class main{
 		matrix A2 = new matrix(n,n);
 		matrix R2 = new matrix(n,n);
 		vector b = new vector(n);
-		for(int i=0; i<n2; i++){
+		for(int i=0; i<n; i++){
 			b[i] = rand.Next(1,10);
 			for(int j=0; j<n; j++){
 				A2[i,j] = rand.Next(1,10);
@@ -66,13 +66,13 @@ public class main{
 
 		WriteLine("Solving the system of equations. The solution (x) is:");
 		matrix Q2 = A2.copy();
-		vector x = QRGS.QRGSsolve(Q2, R2, b);
+		vector x = QRGS.solve(Q2, R2, b);
 		x.print();
 		
 		WriteLine("Checking that A*x=b\n");
 		vector A_x = C2*x;
 		A_x.print();
 		b.print();
-		WriteLine($"Is A*x approximately equal to b? {Ax.approx(b)}");
+		WriteLine($"Is A*x approximately equal to b? {A_x.approx(b)}");
 	}
 }

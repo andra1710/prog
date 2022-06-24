@@ -4,12 +4,14 @@ all: Out.txt
 Out.txt: main.exe
 	mono main.exe > Out.txt
 
-main.exe: main.cs cmath.dll
-	mcs -t:exe -out:$@ $(addprefix -r:,$(filter %.dll,$^)) $<
+main.exe: main.cs cmath.dll complex.dll
+	mcs $< -target:exe -reference:cmath.dll,complex.dll
 
-CMATHDIR = /home/kraghbali/Documents/prakprogF22/prog/exercise/complex/class/files
-cmath.dll: $(CMATHDIR)/complex.cs $(CMATHDIR)/cmath.cs
-	mcs -t:library -out:./$@ $^
+cmath.dll: cmath.cs complex.dll
+	mcs $< -target:library -reference:complex.dll
+
+complex.dll: complex.cs
+	mcs $< -target:library
 
 clean:
-	$(RM) *.exe *.dll [Oo]ut*.txt
+	rm -f *.txt *.exe *.dll

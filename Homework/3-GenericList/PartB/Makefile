@@ -1,7 +1,7 @@
-all: Out.txt
+all: out.txt
 	cat $<
 
-Out.txt: main.exe input.txt
+out.txt: main.exe input.txt
 	mono $< > $@ input.txt
 
 main.exe: main.cs genlist.dll

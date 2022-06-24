@@ -6,3 +6,6 @@ Out.txt: epsilon.exe
 
 epsilon.exe: epsilon.cs
 	mcs -target:exe -out:epsilon.exe epsilon.cs
+
+clean:
+	rm -f Out.txt main.exe

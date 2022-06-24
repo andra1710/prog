@@ -29,8 +29,8 @@ public class roots{
 			}
 			matrix R = new matrix(n,n);
 			matrix Q = J.copy();
-			lineq.QRGSdecomp(Q,R);
-			vector Dx = lineq.QRGSsolve(Q,R, -fx); // Newton's step
+			QRGS.QRGSdecomp(Q,R);
+			vector Dx = QRGS.solve(Q,R, -fx); // Newton's step
 
 			double s = 2.0;
 			bool scan2 = true;
