@@ -2,17 +2,17 @@
 Testing both integrator routines on some interesting integrals
 
 Integrating x*y dx dy, x = 0..1, y = 0..1
-	Plain routine gives: 0.250011099469974 with error 0.000983707334071472
+	Plain routine gives: 0.24951166405043 with error 0.000986689250451647
 	Halton routine gives: 0.249949136753289 with error 5.23342719200015E-05
 	Result should be 0.25
 
 Integrating (x + sin(y) + 1) dx dy, x = 0..2, y = -pi..pi
-	Plain routine gives: 25.1712606903907 with error 0.0511853549914339
+	Plain routine gives: 25.0678161944732 with error 0.0512285309453158
 	Halton routine gives: 25.1314937429818 with error 0.00222293567513532
 	Result should be 8*pi = 25.133
 
 Integrating 1/([1 - cos(x)*cos(y)*cos(z)]*pi^3) dx dy dz, x = 0..pi, y = 0..pi, z = 0..pi
-	Plain routine gives: 1.39077697996277 with error 0.00257279454794227
+	Plain routine gives: 1.39460250012927 with error 0.0043181920758134
 	Halton routine gives: 1.39093451679632 with error 0.00135169310010141
 	Result should be 1.393203
 -----------------------------------------------------------------------

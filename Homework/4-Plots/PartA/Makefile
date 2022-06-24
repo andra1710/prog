@@ -29,3 +29,6 @@ all: main.exe
 
 %.exe: %.cs # any strings of .exe depends og .cs
 	mcs $<
+
+clean:
+	rm -r *.png log* [Oo]ut* *.exe

@@ -1,5 +1,5 @@
 using static System.Math;
-public class evd{
+public class eig{
 
 	public static void timesJ(matrix A, int p, int q, double phi){ 
 	// Classic matrix multiplication

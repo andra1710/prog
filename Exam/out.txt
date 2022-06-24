@@ -1,11 +1,11 @@
 Testing the implemented Monte-Carlo integrator on some interesting integrals
 
 Integrating sin(x)^2 from 0 to pi
-	Result is 1.57079578444846 and it should be 1.5707963267949
-	The difference is 5.42346434873053E-07
+	Result is 1.57099429982561 and it should be 1.5707963267949
+	The difference is 0.00019797303070912
 Integrating x from 0 to 1
-	Result is 0.50000266338358 and it should be 0.5
-	The difference is 1.07079578444846
+	Result is 0.500081945463209 and it should be 0.5
+	The difference is 1.07099429982561
 Integrating sqrt(x) from 0 to 1
-	Result is 0.666660441714767 and it should be 0.666666666666667
-	The difference is 6.22495189928074E-06
+	Result is 0.666636325657903 and it should be 0.666666666666667
+	The difference is 3.03410087636458E-05

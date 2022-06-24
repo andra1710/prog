@@ -1,7 +1,7 @@
 using System;
 using static System.Console;
 using static System.Random;
-public clyss main{
+public class main{
 	public static void Main(){
 		double[] ts = new double[] {1,2,3,4,6,9,10,13,15}; // time
 		double[] ys = new double[] {117,100,88,72,53,29.5,25.2,15.2,11.1}; // activity

@@ -6,8 +6,8 @@ public class lsfit{
 
 
 	public static double[] fit(double[] ts, double[] ys, double[] dy, Func<double,double>[] func){
-		int n = ts.lenght;
-		int m = func.lenght;
+		int n = ts.Length;
+		int m = func.Length;
 		matrix A = new matrix(n, m);
 		matrix R = new matrix(m, m);
 		vector b = new vector(n);
@@ -19,8 +19,9 @@ public class lsfit{
 		}
 
 
-		QRGS.QRGSdecomp(Q,R);
+		
 		matrix Q = A;
+		QRGS.QRGSdecomp(Q,R);
 		vector ans = QRGS.solve(R, Q.transpose()*b);
 		return ans;
 		}

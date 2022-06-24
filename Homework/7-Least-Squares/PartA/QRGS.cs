@@ -14,6 +14,13 @@ public class QRGS{
 		}
 	}
 
+		public static vector solve(matrix A, vector b){
+		matrix Q = A.copy();
+		matrix R = new matrix(A.size2, A.size2);
+		QRGSdecomp(Q,R);
+		return solve(Q,R,b);
+	}
+
 	public static vector solve(matrix Q, matrix R, vector b){ /* solve vector */
 		matrix Q_trans = Q.transpose(); // Q transpose
 		vector x = Q_trans*b; // calculates the solotion

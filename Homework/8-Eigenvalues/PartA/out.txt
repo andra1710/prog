@@ -1,0 +1,69 @@
+Generating a random {n} x {n} symmetric Matrix:
+
+         5          3          7          1          8 
+         3          9          9          2          2 
+         7          9          6          4          6 
+         1          2          4          5          5 
+         8          2          6          5          7 
+
+
+Making the Jacobi EVD:
+The number of sweeps required was: 6
+
+ The matrix containing eigenvalues on its diagonal is:
+
+      -4.1          0   3.99e-12   1.94e-15  -1.37e-16 
+ -4.32e-16      -2.48  -2.36e-14  -1.48e-21    1.2e-08 
+  3.99e-12  -2.39e-14       4.13          0  -9.38e-11 
+  2.97e-15  -1.59e-16  -1.75e-16       8.26   7.38e-11 
+ -1.62e-16    1.2e-08  -9.38e-11   7.38e-11       26.2 
+
+ The matrix V containing the normalized eigenvectors in its columns:
+
+     0.599     -0.334      0.507     -0.285      0.438 
+     0.288      0.419    -0.0439      0.732      0.452 
+    -0.623     -0.516     0.0379      0.204      0.549 
+       0.3     -0.215     -0.859     -0.219      0.279 
+    -0.282      0.633     0.0356     -0.542      0.474 
+
+
+Checking if V^T*A*V=D:
+
+      -4.1  -1.33e-15   3.99e-12   1.33e-15  -2.66e-15 
+ -1.22e-15      -2.48  -2.36e-14  -2.22e-16    1.2e-08 
+  3.99e-12  -2.42e-14       4.13   1.69e-15  -9.38e-11 
+  1.33e-15  -8.88e-16   1.42e-15       8.26   7.38e-11 
+ -4.44e-15    1.2e-08  -9.38e-11   7.38e-11       26.2 
+
+ Using the approx. method, this is True 
+
+Checking if V*D*V^T=A:
+
+         5          3          7          1          8 
+         3          9          9          2          2 
+         7          9          6          4          6 
+         1          2          4          5          5 
+         8          2          6          5          7 
+
+ Using the approx. method, this is True
+
+Checking if V^T*V=I:
+
+         1   4.44e-16  -1.04e-17   1.39e-16  -1.11e-16 
+  4.44e-16          1   4.51e-17   5.55e-17  -1.11e-16 
+ -1.04e-17   4.51e-17          1          0  -7.63e-17 
+  1.39e-16   5.55e-17          0          1  -5.55e-17 
+ -1.11e-16  -1.11e-16  -7.63e-17  -5.55e-17          1 
+
+ Using the approx. method, this is True
+
+Checking if V*V^T=I
+
+         1   4.44e-16  -1.04e-17   1.39e-16  -1.11e-16 
+  4.44e-16          1   4.51e-17   5.55e-17  -1.11e-16 
+ -1.04e-17   4.51e-17          1          0  -7.63e-17 
+  1.39e-16   5.55e-17          0          1  -5.55e-17 
+ -1.11e-16  -1.11e-16  -7.63e-17  -5.55e-17          1 
+
+ Using the approx. method, this is True
+

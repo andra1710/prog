@@ -1,0 +1,4 @@
+ 
+The fit parameters are: a = 4.95112516950657 and lambda = -0.172070796448846
+The half-life is Ln(2)/-lambda = 4.02826740426001 days
+This is not close to the table value of 3.6319 days (Wikipedia)

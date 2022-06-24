@@ -2,7 +2,7 @@ all: out.txt
 	cat $<
 	make Optimized_Ode45.png
 
-Optimized_Ode45.png: Ode45.gpi Optimized_Ode45.txt
+Optimized_Ode45.png: Ode45.gpi sol.txt
 	pyxplot $<
 
 out.txt: main.exe
