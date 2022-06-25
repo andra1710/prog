@@ -1,9 +1,9 @@
 using System;
 using static System.Math;
 public class radapt{
-	public static double rad(Func<double, double> f, double a, double b, double acc, double eps, int old_N, double old_sum, double old_sum2){
-		int N = 16; // number of random nodes
-		/* The next variables are used when we split of our recursive*/
+	public static double rad(Func<double, double> f, double a, double b, double acc, double eps, int old_N, double old_sum, double old_sum2, int N){
+		/* The int N is the number of new points thrown at each iteration
+		The next variables are used when we split of our recursive*/
 		int N_left = 0;
 		double sum_left = 0;
 		double sum2_left = 0;
@@ -45,8 +45,8 @@ public class radapt{
 			return integral; // make it a vector with Integral and the N??
 		}
 		else{ // making the recursive calls til we have the err < tol.
-			double Left = rad(f, a,(a+b)/2.0,acc/Sqrt(2),eps, N_left,sum_left, sum2_left);
-			double Right = rad(f, (a+b)/2.0, b,acc/Sqrt(2),eps,N_right,sum_right, sum2_right);
+			double Left = rad(f, a,(a+b)/2.0,acc/Sqrt(2),eps, N_left,sum_left, sum2_left, N);
+			double Right = rad(f, (a+b)/2.0, b,acc/Sqrt(2),eps,N_right,sum_right, sum2_right, N);
 			return Left+Right;
 		}
 	} 
