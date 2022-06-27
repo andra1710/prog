@@ -9,5 +9,6 @@ Lastly I compare my random integrator with the recursive adaptive integrator fro
 I would estimate to have Answered the exmamination project.
 --------------------------------------------------------------------------------------------------------------------------------------------
 The integration.cs is my recursive adaptive integrator from quadratures homework Part A.
+--------------------------------------------------------------------------------------------------------------------------------------------
 radapt.cs is my random apporch with gives back a object with (the integral, number of point used, the error, the tolerance) 
 --------------------------------------------------------------------------------------------------------------------------------------------
