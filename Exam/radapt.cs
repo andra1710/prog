@@ -43,9 +43,11 @@ public class radapt{
 		double err = sigma*width/Sqrt(old_N); // the error
 		double tol = acc + Abs(integral)*eps; // calculating our tolerance
 		if (err < tol){ // if our error is less than the integral, we will return our integral, error and number of points
-			object[] ResArray = new object[2];
+			object[] ResArray = new object[4];
 			ResArray[0] = integral;
 			ResArray[1] = old_N;
+			ResArray[2] = err;
+			ResArray[3] = tol;
 			return ResArray; // make it a vector with Integral and the N??
 		}
 		else{ // making the recursive calls til we have the err < tol.
@@ -53,11 +55,17 @@ public class radapt{
 			object[] Right = rad(f, c, b,acc/Sqrt(2),eps,N_right,sum_right, sum2_right, N);
 			double Left_integral = Convert.ToDouble(Left[0]);
 			int Left_N = (int) Left[1];
+			double Left_err = Convert.ToDouble(Left[2]);
+			double Left_tol = Convert.ToDouble(Left[3]);
 			double Right_integral = Convert.ToDouble(Right[0]);
 			int Right_N = (int) Right[1];
-			object[] ResArray = new object[2];
+			double Right_err = Convert.ToDouble(Right[2]);
+			double Right_tol = Convert.ToDouble(Right[3]);
+			object[] ResArray = new object[4];
 			ResArray[0] = Left_integral+Right_integral;
 			ResArray[1] = Left_N+Right_N;
+			ResArray[2] = Left_err+Right_err;
+			ResArray[3] = Left_tol+Right_tol;
 			return ResArray;
 		}
 	} 

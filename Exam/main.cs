@@ -119,8 +119,15 @@ public class main{
 		WriteLine($"The difference is {delta2}.\n");
 		WriteLine($"Result from our radapt {res3[0]} and the result from our quadratures integrator is {ans3}.\n");
 		WriteLine($"The difference is {delta3}.\n");
-		WriteLine($"We see our difference is order or 10^⁻4 or less, so our random approch is just fine.");
-
+		WriteLine($"We see our difference is order or 10^⁻4 or less, so our random approch is just fine.\n");
+		WriteLine("--------------------------------- radapt.cs: ---------------------------------\n");
+		WriteLine("My rad function returns a object with 4 values, the result of the integral, the number of points used, the error and our tolerance:");
+		WriteLine("\t for our first integral in part A we got:");
+		WriteLine($"\t\t result = {res1[0]}.");
+		WriteLine($"\t\t number of points used = {res1[1]}.");
+		WriteLine($"\t\t error = {res1[2]}.");
+		WriteLine($"\t\t tolerance = {res1[3]}.");
+		WriteLine($"\t\t the exact result is {PI/2}.");
 	}
 
 }
