@@ -1,56 +1,75 @@
 --------------------------------- Part A ---------------------------------
-
 Testing the implemented Monte-Carlo integrator on some interesting integrals
 
-Integrating sin(x)^2 from 0 to 3.14159265358979
-Result is 1.57079598265765 and it should be 1.5707963267949
-The difference is 3.44137244034926E-07
-Integrating exp(-x**2) from -3.14159265358979 to 3.14159265358979
-Result is 1.7724374779535 and it should be around 1.77244
-The difference is 1.07079598265765
-Integrating 1/sqrt(x) from 1 to 10
-Result is 4.324556927058 and it should be 0.666666666666667
-The difference is 3.65789026039133
+
+Integrating sin(x)^2 from 0 to 3.14159265358979:
+	Result is 1.57079638856641 and it should be 1.5707963267949
+	The difference is 6.17715105732941E-08
+	we used 158769 points to calculate this integral with our random approch.
+
+Integrating exp(-x**2) from -3.14159265358979 to 3.14159265358979:
+Result is 1.77243791334931 and it should be around 1.77244
+The difference is 1.27243791334931
+we used 217066 points to calculate this integral with our random approch.
+
+Integrating 1/sqrt(x) from 1 to 10:
+Result is 4.32455471409754 and it should be 0.666666666666667
+The difference is 3.65788804743087
+we used 147927 points to calculate this integral with our random approch.
+
 --------------------------------- Part B ---------------------------------
+Finding the optimum number of new points thrown at each iteration:
+We use the untegration of sin(x)^2 from 0 to 3.14159265358979, which should be equal to 1.5707963267949:
 
-Finding the optimum number of new points thrown at each iteration
+Result for 1 new points thrown at each iterration is 1.28040708759209
+we used 1 points to calculate this integral with our random approch.
 
-We use the untegration of sin(x)^2 from 0 to 3.14159265358979, which should be equal to 1.5707963267949
+Result for 2 new points thrown at each iterration is 1.57080448078792
+we used 30973 points to calculate this integral with our random approch.
 
-Result for 1 new points thrown at each iterration is 2.97344163095547
+Result for 4 new points thrown at each iterration is 1.57079853176604
+we used 64275 points to calculate this integral with our random approch.
 
-Result for 2 new points thrown at each iterration is 1.57078527294043
+Result for 8 new points thrown at each iterration is 1.57079600018933
+we used 102334 points to calculate this integral with our random approch.
 
-Result for 4 new points thrown at each iterration is 1.57079617918183
+Result for 16 new points thrown at each iterration is 1.57079689979583
+we used 158625 points to calculate this integral with our random approch.
 
-Result for 8 new points thrown at each iterration is 1.57079578659145
+Result for 64 new points thrown at each iterration is 1.57079622828917
+we used 431293 points to calculate this integral with our random approch.
 
-Result for 16 new points thrown at each iterration is 1.57079636822118
+Result for 128 new points thrown at each iterration is 1.57079687364547
+we used 638851 points to calculate this integral with our random approch.
 
-Result for 64 new points thrown at each iterration is 1.57079665790679
+Result for 256 new points thrown at each iterration is 1.57079681456927
+we used 1143703 points to calculate this integral with our random approch.
 
-Result for 128 new points thrown at each iterration is 1.57079713168375
+We use the untegration of exp(-x²) from -3.14159265358979 to 3.14159265358979, which should be equal to 1.77244:
 
-Result for 256 new points thrown at each iterration is 1.57079703982545
+Result for 1 new points thrown at each iterration is 0.51202699855085
+we used 1 points to calculate this integral with our random approch.
 
-We use the untegration of exp(-x²) from -3.14159265358979 to 3.14159265358979, which should be equal to 1.77244
+Result for 2 new points thrown at each iterration is 1.77237373374584
+we used 43028 points to calculate this integral with our random approch.
 
-Result for 1 new points thrown at each iterration is 5.43955318290508
+Result for 4 new points thrown at each iterration is 1.77243782867516
+we used 88016 points to calculate this integral with our random approch.
 
-Result for 2 new points thrown at each iterration is 1.77244354704445
+Result for 8 new points thrown at each iterration is 1.77243701223116
+we used 152593 points to calculate this integral with our random approch.
 
-Result for 4 new points thrown at each iterration is 1.77243872376231
+Result for 16 new points thrown at each iterration is 1.77243968278243
+we used 218219 points to calculate this integral with our random approch.
 
-Result for 8 new points thrown at each iterration is 1.77243881980334
+Result for 64 new points thrown at each iterration is 1.77243794383067
+we used 638172 points to calculate this integral with our random approch.
 
-Result for 16 new points thrown at each iterration is 1.77243745712841
+Result for 128 new points thrown at each iterration is 1.77243784385446
+we used 851664 points to calculate this integral with our random approch.
 
-Result for 64 new points thrown at each iterration is 1.77243815232985
-
-Result for 128 new points thrown at each iterration is 1.77243861883022
-
-Result for 256 new points thrown at each iterration is 1.77243908527714
-
+Result for 256 new points thrown at each iterration is 1.77243761844558
+we used 1520498 points to calculate this integral with our random approch.
 With our first integrals we found that more than one new points give us the right answer to the 3th decimal.
 
 In this project I have run the code multiply times and see some get most accurate answer with 64 or 124 points,
@@ -63,16 +82,16 @@ Depending on what we need, and how much time our program must take up, since mor
 
 We calculate our results from Part A using our integrator from the quadratures homework Part A:
 
-Result from our radapt 1.57079598265765 and the result from our quadratures integrator is 1.5707963267949.
+Result from our radapt 1.57079638856641 and the result from our quadratures integrator is 1.5707963267949.
 
-The difference is 3.44137244034926E-07.
+The difference is 6.17715105732941E-08.
 
-Result from our radapt 1.7724374779535 and the result from our quadratures integrator is 1.77242780493467.
+Result from our radapt 1.77243791334931 and the result from our quadratures integrator is 1.77242780493467.
 
-The difference is 9.67301882282001E-06.
+The difference is 1.01084146342245E-05.
 
-Result from our radapt 4.324556927058 and the result from our quadratures integrator is 4.32440021915679.
+Result from our radapt 4.32455471409754 and the result from our quadratures integrator is 4.32440021915679.
 
-The difference is 0.000156707901204811.
+The difference is 0.000154494940745487.
 
 We see our difference is order or 10^⁻4 or less, so our random approch is just fine.

@@ -4,14 +4,14 @@ all: out.txt
 out.txt: main.exe
 	mono $< > $@
 
-main.exe: main.cs radapt.dll vector.dll integrator.dll
-	mcs $< -target:exe -reference:radapt.dll,vector.dll,integrator.dll
+main.exe: main.cs radapt.dll integrator.dll# vector.dll
+	mcs $< -target:exe -reference:radapt.dll,integrator.dll
 
-radapt.dll: radapt.cs  vector.dll
-	mcs $< -target:library -reference:vector.dll
+radapt.dll: radapt.cs  #vector.dll
+	mcs $< -target:library #-reference:vector.dll
 
-vector.dll: vector.cs
-	mcs $< -target:library
+#vector.dll: vector.cs
+#	mcs $< -target:library
 
 integrator.dll: integrator.cs
 	mcs $< -target:library

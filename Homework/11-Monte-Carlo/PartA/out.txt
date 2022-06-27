@@ -1,13 +1,13 @@
 Testing the implemented Monte-Carlo integrator on some interesting integrals
 
 Integrating x*y dx dy, x = 0..1, y = 0..1
-	Result is 0.249350071585082 and error is 0.00098221849066171
+	Result is 0.25046600407319 and error is 0.000988858586310454
 	Result should be 0.25
 
 Integrating (x + sin(y) + 1) dx dy, x = 0..2, y = -pi..pi
-	Result is 25.1306113381434 and error is 0.0513244328304835
+	Result is 25.0231076661155 and error is 0.0512965193591962
 	Result should be 8*pi = 25.133
 
 Integrating 1/([1 - cos(x)*cos(y)*cos(z)]*pi^3) dx dy dz, x = 0..pi, y = 0..pi, z = 0..pi
-	Result is 1.57287391327731 and error is 0.216007742275213
+	Result is 1.36195124398622 and error is 0.0155300138881204
 	Result should be 1.393203
